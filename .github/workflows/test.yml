@@ -1,0 +1,13 @@
+name: codecov
+
+on: [push, pull_request]
+
+jobs:
+  code_coverage:
+    runs-on: ubuntu-22.04
+    name: Codecov
+    steps:
+    - uses: actions/checkout@main
+    - name: Create the docker container and run the tests
+      run: |
+        gcc -v
